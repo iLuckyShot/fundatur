@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon'
+import Base from '../layouts/base.astro'
+import PageHero from '../components/pagehero.astro'
+import { SiteMetadata } from '../config'
+import coverSVG from '../assets/svg/undraw/undraw_contact_us.svg'
+import socialImage from '../assets/undraw/undraw_contact_us.png'
+
+const frontmatter = {
+  title: 'Inicio de Sesion',
+  description: '',
+  coverSVG: coverSVG,
+  socialImage: socialImage,
+  publishDate: SiteMetadata.buildTime
+}
+---
+
+<Base frontmatter={frontmatter}>
+    <header>
+      <PageHero
+        title={frontmatter.title}
+        description={frontmatter.description}
+        coverSVG={coverSVG}
+        socialImage={socialImage}
+      />
+    </header>
+    <main>
+        <h1 class='text-base font-semibold tracking-wide text-wine-950 dark:text-white'>Usuario</h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" required>
+            </div>
+        </form>
+        <h1 class='text-base font-semibold tracking-wide text-wine-950 dark:text-white'>Contraseña</h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="password" required>
+            </div>
+            <input type="submit" value="Iniciar Sesion">
+        </form>
+    </main>
+</Base>

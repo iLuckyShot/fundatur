@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+export interface Props {
+  base: string
+  prev: CollectionEntry<'blog'> | CollectionEntry<'doc'> | undefined
+  next: CollectionEntry<'blog'> | CollectionEntry<'doc'> | undefined
+}
+
+const { base, prev, next } = Astro.props
+---
+
+<dl class='mt-12 flex border-t border-wine-950 pt-6 dark:border-wine-950'>
+  {
+    prev && (
+      <div class='mr-auto text-left'>
+        <dt class='font-display text-sm font-medium text-gray-800 dark:text-gray-200'>Anterior</dt>
+        <dd class='mt-1'>
+          <a
+            class='text-base font-semibold text-wine-950 hover:text-wine-600 dark:text-white dark:hover:text-wine-900'
+            href={base + prev.slug}
+          >
+            <span aria-hidden='true'>←</span>
+            {prev.data.title}
+          </a>
+        </dd>
+      </div>
+    )
+  }
+  {
+    next && (
+      <div class='ml-auto text-right'>
+        <dt class='font-display text-sm font-medium text-gray-800 dark:text-gray-200'>Siguiente</dt>
+        <dd class='mt-1'>
+          <a
+            class='text-base font-semibold text-wine-950  hover:text-wine-600 dark:text-white dark:hover:text-wine-900'
+            href={base + next.slug}
+          >
+            {next.data.title}
+            <span aria-hidden='true'>→</span>
+          </a>
+        </dd>
+      </div>
+    )
+  }
+</dl>

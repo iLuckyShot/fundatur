@@ -1,0 +1,29 @@
+---
+import { Icon } from 'astro-icon'
+import Base from '../layouts/base.astro'
+import PageHero from '../components/pagehero.astro'
+import { SiteMetadata } from '../config'
+import coverSVG from '../assets/svg/undraw/undraw_contact_us.svg'
+import socialImage from '../assets/undraw/undraw_contact_us.png'
+
+const frontmatter = {
+  title: 'Mapa de Eventos Culturales y Recreacionales',
+  description: 'Visualiza a traves de nuestro mapa virtual, los eventos que se esten llevando a cabo o que se realizaran en las proximas fechas, en el Centro Historico de Valencia.',
+  coverSVG: coverSVG,
+  socialImage: socialImage,
+  publishDate: SiteMetadata.buildTime
+}
+---
+
+<Base frontmatter={frontmatter}>
+    <header>
+      <PageHero
+        title={frontmatter.title}
+        description={frontmatter.description}
+        coverSVG={coverSVG}
+        socialImage={socialImage}
+      />
+    </header>
+    <main>
+
+    </main>
