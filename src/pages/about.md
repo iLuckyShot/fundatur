@@ -14,4 +14,4 @@ La Fundación para el Fomento y Desarrollo de Obras  y Actividades Turísticas y
 ## Nuestros Objetivos Estratégicos
 
 - Ofrecer espacios para la recreación y sano esparcimiento, donde se organizan y ejecutan diversos eventos comunitarios, con el objeto de atender las necesidades de las comunidades del Municipio.
-- Evaluar, proyectar y administrar anualmente, los recursos financieros para el financiamiento de programas y proyectos pautados, para el ejercicio presupuestario, bajo la Dirección e Instrucción de la Alcaldía del Municipio Valencia.
+- Evaluar, proyectar y administrar anualmente, los recursos financieros para el financiamiento de programas y proyectos pautados, para el ejercicio presupuestario, bajo la Dirección e Instrucción de la Alcaldía del Municipio Valencia
